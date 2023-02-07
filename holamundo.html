@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+h1{
+    color: green;
+    background-color: rgb(146, 146, 146);
+}
+
+body {
+  margin: 0;
+}
+
+
+nav {
+    margin: 0 auto;
+    width: 30vw;
+    
+}
+nav ul {
+    display: flex;
+    padding-inline-start: 0;
+    list-style-type: none;
+    justify-content: space-around;
+}
+
+
+
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+}
+
+/* Left and right column */
+.column.side {
+  width: 25%;
+  background-color: gray;
+}
+
+/* Middle column */
+.column.middle {
+  width: 50%;
+}
+  .medio{
+    border-color: rgb(0, 164, 16);
+  border-width: 3px;
+  border-style: solid;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}
+
+
+</style>
+</head>
+<body>
+
+    <header>
+        <h1>Cabecera</h1>
+        <nav>
+        <ul>
+            <li><a href="">Opcion 1</a></li>
+            <li><a href="">Opcion 2</a></li>
+            <li><a href="">Opcion 3</a></li>
+        </ul>
+        </nav>
+    </header>
+
+
+<div class="row">
+  <div class="column side">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus commodi omnis esse eligendi optio quidem ullam pariatur sit distinctio obcaecati fugiat dolor quibusdam consequatur exercitationem, voluptas harum laborum culpa hic?</p>
+  </div>
+  
+  <div class="column middle">
+    <p class="medio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+    <p class="medio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+  </div>
+  
+  <div class="column side">
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil, magni ab qui modi, culpa molestiae iste at asperiores accusantium fugiat nemo quo, cumque quidem aspernatur blanditiis tenetur laboriosam ex fuga.</p>
+  </div>
+</div>
+
+
+  
+</body>
+</html>
